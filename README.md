@@ -1,4 +1,11 @@
 # FinOps AI Observability POC
+Are you catching your cloud cost spikes 15 to 30 days too late? I've eliminated that lag. I built a fully open-source, ML-powered FinOps system that detects AWS anomalies in under an hour. Instantly caught over $3,200 in waste, proving you can save up to $200K a year without paying for commercial tools or even AWS's own ML services, if you really want to avoid it.
+
+Code on GitHub: [naveedhsk/finops-ai-observability-poc]
+
+
+
+#FinOps #MachineLearning #CloudCost #AWS #Observability #Otel
 
 > AI-powered AWS cost anomaly detection with real-time observability. Detect cost spikes in minutes, not weeks.
 
