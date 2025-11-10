@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  # Main Application
+  app:
+    build: .
+    container_name: finops-ai-detector
+    ports:
+      - "8000:8000"
+    environment:
+      - OTEL_SERVICE_NAME=finops-ai-detector
+      - PROMETHEUS_PORT=9090
+      - METRICS_PORT=8000
+    volumes:
+      - ./data:/app/data
+      - ./src:/app/src
+    depends_on:
+      - prometheus
+    networks:
+      - finops-network
+
+  # Prometheus for metrics
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: finops-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./dashboards/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    networks:
+      - finops-network
+
+  # Simple Dashboard
+  dashboard:
+    image: nginx:alpine
+    container_name: finops-dashboard
+    ports:
+      - "8080:80"
+    volumes:
+      - ./dashboards:/usr/share/nginx/html:ro
+    networks:
+      - finops-network
+
+volumes:
+  prometheus-data:
+
+networks:
+  finops-network:
+    driver: bridge
