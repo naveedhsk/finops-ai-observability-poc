@@ -84,9 +84,9 @@ This POC showcases:
 
 ## 📝 License
 
-MIT License - feel free to use for learning and demonstration
+License - feel free to use for learning and demonstration
 
 ---
 
-**Built to demonstrate Principal L2 Engineering Excellence**
+**Built to demonstrate Principal Engineering Excellence**
 *Simplicity • Strategy • Impact*
