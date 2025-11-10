@@ -32,7 +32,7 @@ I built a Proof-of-Concept using ML (Isolation Forest) + statistical methods tha
 • Projected savings: **$50K–$200K/year** for mid-size deployments.  
 • **No need to pay for cloud ML services** (like AWS SageMaker) or commercial FinOps tools—this solution is fully open-source and repeatable.
 
-💡 **How much does it cost to run?** Zero. This POC is fully open-source and runs locally. One command: `docker-compose up -d` ✨
+💡 **How much does it cost to run?** Zero. This POC is fully open-source and runs locally. One command: `docker-compose up -d`
 
 Code on GitHub: [[naveedhsk/finops-ai-observability-poc](https://github.com/naveedhsk/finops-ai-observability-poc)]
 
